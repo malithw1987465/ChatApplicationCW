@@ -4,17 +4,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="665.0" style="-fx-background-color: #95a5a6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ClientFormController">
    <children>
       <TextArea fx:id="ClientTextArea" layoutX="27.0" layoutY="83.0" prefHeight="200.0" prefWidth="576.0" />
-      <TextField fx:id="ClienttxtField" layoutX="14.0" layoutY="341.0" prefHeight="70.0" prefWidth="515.0" />
-      <Button fx:id="btnSendClient" layoutX="557.0" layoutY="335.0" mnemonicParsing="false" onAction="#btnSendOnAction" prefHeight="63.0" prefWidth="68.0" style="-fx-background-color: #3498db;" text="Send" />
-      <Label fx:id="lblClient" layoutX="250.0" layoutY="14.0" prefHeight="36.0" prefWidth="166.0" text="Client">
+      <TextField fx:id="ClienttxtField" layoutX="33.0" layoutY="356.0" prefHeight="55.0" prefWidth="511.0" />
+      <Button fx:id="btnSendClient" layoutX="561.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnSendOnAction" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: #3498db;" text="Send" />
+      <Button fx:id="btncamera" layoutX="463.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnCameraOnAction" prefHeight="49.0" prefWidth="81.0" />
+      <ImageView fitHeight="55.0" fitWidth="81.0" layoutX="463.0" layoutY="353.0">
+         <image>
+            <Image url="@img/photo-camera.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="14.0" prefHeight="45.0" prefWidth="160.0" text="Chat Room">
          <font>
-            <Font size="46.0" />
+            <Font size="30.0" />
          </font>
       </Label>
    </children>

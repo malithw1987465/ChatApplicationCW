@@ -56,4 +56,7 @@ public class ClientFormController {
             outputStream.flush();
             }
 
-        }
+    public void btnCameraOnAction(ActionEvent actionEvent) {
+
+    }
+}
