@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginFormController {
+
     public Button btnLogin;
     public TextField txtUserName;
     public AnchorPane dashboardPane;
@@ -18,9 +19,8 @@ public class LoginFormController {
         String name=txtUserName.getText();
         Stage stage = (Stage) dashboardPane.getScene().getWindow();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ServerForm.fxml"))));
-        stage.setTitle(name+"Chat  Room");
+        stage.setTitle(name+" Chat Room");
         stage.centerOnScreen();
         stage.show();
-
     }
 }

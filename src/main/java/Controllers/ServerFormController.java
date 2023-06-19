@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -46,6 +47,9 @@ public class ServerFormController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            while(true){
+                
+            }
         });
 
         initialThrade.start();
@@ -56,5 +60,8 @@ public class ServerFormController {
         outputStream.flush();
         }
 
+    public void btnCameraOnAction(MouseEvent mouseEvent) {
+
     }
+}
 

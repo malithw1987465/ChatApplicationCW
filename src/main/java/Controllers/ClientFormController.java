@@ -57,6 +57,7 @@ public class ClientFormController {
             }
 
     public void btnCameraOnAction(ActionEvent actionEvent) {
+        
 
     }
 }
