@@ -14,12 +14,15 @@
       <TextArea fx:id="ClientTextArea" layoutX="27.0" layoutY="83.0" prefHeight="200.0" prefWidth="576.0" />
       <TextField fx:id="ClienttxtField" layoutX="33.0" layoutY="356.0" prefHeight="55.0" prefWidth="511.0" />
       <Button fx:id="btnSendClient" layoutX="561.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnSendOnAction" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: #3498db;" text="Send" />
-      <Button fx:id="btncamera" layoutX="463.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnCameraOnAction" prefHeight="49.0" prefWidth="81.0" />
-      <ImageView fitHeight="55.0" fitWidth="81.0" layoutX="463.0" layoutY="353.0">
-         <image>
-            <Image url="@img/photo-camera.png" />
-         </image>
-      </ImageView>
+      <Button fx:id="btncamera" layoutX="463.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnCameraOnAction" prefHeight="49.0" prefWidth="81.0">
+         <graphic>
+            <ImageView fx:id="imgbutton" fitHeight="41.0" fitWidth="59.0">
+               <image>
+                  <Image url="@img/camera.png"/>
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
       <Label layoutX="27.0" layoutY="14.0" prefHeight="45.0" prefWidth="160.0" text="Chat Room">
          <font>
             <Font size="30.0" />
