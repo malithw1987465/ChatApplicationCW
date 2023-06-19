@@ -9,11 +9,11 @@
 
 <AnchorPane fx:id="dashboardPane" prefHeight="503.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginForm">
     <children>
-        <ImageView fitHeight="503.0" fitWidth="581.0">
-            <image>
-                <Image url="@../img/LoginForm.png" />
-            </image>
-        </ImageView>
+      <ImageView fitHeight="503.0" fitWidth="581.0" layoutX="-1.0">
+         <image>
+            <Image url="@img/LoginForm.png" />
+         </image>
+      </ImageView>
         <TextField fx:id="txtUserName" layoutX="190.0" layoutY="184.0" prefHeight="39.0" prefWidth="230.0" promptText="username" />
         <TextField fx:id="txtPassword" layoutX="190.0" layoutY="261.0" prefHeight="39.0" prefWidth="230.0" promptText="password" />
         <Button fx:id="btnLogin" layoutX="232.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #26c6da;" text="LOGIN">
