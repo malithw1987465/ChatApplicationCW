@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="dashboardPane" prefHeight="503.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginFormController">
     <children>
-      <ImageView fitHeight="504.0" fitWidth="581.0">
+      <ImageView fitHeight="504.0" fitWidth="587.0">
          <image>
             <Image url="@../img/LoginForm.jpg" />
          </image>

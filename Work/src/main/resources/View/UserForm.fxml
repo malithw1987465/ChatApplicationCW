@@ -2,31 +2,49 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="dashboardPnae" prefHeight="476.0" prefWidth="686.0" style="-fx-background-color: #95a5a6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ServerFormController">
+<AnchorPane fx:id="dashboardPane" prefHeight="476.0" prefWidth="686.0" style="-fx-background-color: #95a5a6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserFormController">
    <children>
-      <TextArea fx:id="txtAreaSever" layoutX="23.0" layoutY="77.0" prefHeight="259.0" prefWidth="631.0" />
-      <TextField fx:id="txtServer" layoutX="23.0" layoutY="374.0" prefHeight="56.0" prefWidth="555.0" />
-      <Button fx:id="btnSend" layoutX="592.0" layoutY="374.0" mnemonicParsing="false" onAction="#bntSendOnAction" prefHeight="56.0" prefWidth="80.0" style="-fx-background-color: #3498db;" text="Send" />
-      <Label layoutX="23.0" layoutY="14.0" prefHeight="56.0" prefWidth="167.0" text="Chat Room">
+      <TextField fx:id="txtMessage" layoutX="14.0" layoutY="392.0" prefHeight="38.0" prefWidth="504.0" />
+      <Button fx:id="btnSend" layoutX="592.0" layoutY="399.0" mnemonicParsing="false" onAction="#bntSendOnAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #3498db;" text="Send" />
+      <Label fx:id="lblName" layoutX="23.0" layoutY="14.0" prefHeight="56.0" prefWidth="167.0">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <Button layoutX="499.0" layoutY="374.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="75.0">
+      <Button fx:id="btnCamera" layoutX="466.0" layoutY="392.0" mnemonicParsing="false" onAction="#btnCameraOnAction" prefHeight="36.0" prefWidth="50.0">
          <graphic>
-            <ImageView fx:id="btnCamera" fitHeight="19.0" fitWidth="60.0" onDragDetected="#btnCameraOnAction">
+            <ImageView fitHeight="28.0" fitWidth="44.0">
                <image>
-                  <Image url="@img/camera.png" />
+                  <Image url="@../img/camera.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnEmoji" layoutX="536.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnEmojiOnAction" prefHeight="31.0" prefWidth="50.0">
+         <graphic>
+            <ImageView fx:id="imgimoji" fitHeight="26.0" fitWidth="22.0">
+               <image>
+                  <Image url="@../img/smiling-face.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
+      <ScrollPane layoutX="9.0" layoutY="70.0" prefHeight="304.0" prefWidth="669.0">
+         <content>
+            <HBox prefHeight="58.0" prefWidth="665.0">
+               <children>
+                  <VBox fx:id="vBox" prefHeight="58.0" prefWidth="720.0" />
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="665.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientFormController">
+   <children>
+      <TextField fx:id="txtMessage" layoutX="27.0" layoutY="400.0" prefHeight="36.0" prefWidth="485.0" />
+      <Button fx:id="btnSend" layoutX="596.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnSendOnAction" prefHeight="31.0" prefWidth="60.0" style="-fx-background-color: #3498db;" text="Send" />
+      <Button fx:id="btncamera" layoutX="428.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnCameraOnAction" prefHeight="31.0" prefWidth="69.0">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="64.0">
+               <image>
+                  <Image url="@img/camera.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="lblName" layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="160.0" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="9.0" layoutY="59.0" prefHeight="298.0" prefWidth="647.0">
+         <content>
+            <HBox prefHeight="56.0" prefWidth="647.0">
+               <children>
+                  <VBox fx:id="vBox" prefHeight="56.0" prefWidth="647.0" />
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <Button fx:id="btnEmoji" layoutX="525.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnEmojiOnAction" prefHeight="31.0" prefWidth="50.0">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="41.0">
+               <image>
+                  <Image url="@img/smiling-face.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
