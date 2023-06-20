@@ -24,7 +24,7 @@ public class LoginFormController {
         }
         else {
             Stage stage = new Stage();
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("View/ServerForm.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("View/UserForm.fxml"))));
             stage.setTitle(name + " Room");
             stage.centerOnScreen();
             stage.show();

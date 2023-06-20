@@ -7,15 +7,15 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class ClientManager extends Thread{
+public class UserManager extends Thread{
 
     String message="";
-    private ArrayList<ClientManager> clients;
+    private ArrayList<Controllers.UserManager> clients;
     private Socket socket;
     private BufferedReader reader;
     private PrintWriter writer;
 
-    public ClientManager(Socket socket,ArrayList<ClientManager> clients) throws IOException {
+    public UserManager(Socket socket, ArrayList<Controllers.UserManager> clients) throws IOException {
         this.clients=clients;
         this.socket=socket;
         this.reader=new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -29,7 +29,7 @@ public class ClientManager extends Thread{
                 if (msg.equalsIgnoreCase( "exit")) {
                     break;
                 }
-                for (ClientManager cl : clients) {
+                for (Controllers.UserManager cl : clients) {
                     cl.writer.println(msg);
                     System.out.println(msg);
                 }
