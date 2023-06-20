@@ -22,7 +22,7 @@
       </Label>
       <Button fx:id="btnCamera" layoutX="466.0" layoutY="392.0" mnemonicParsing="false" onAction="#btnCameraOnAction" prefHeight="36.0" prefWidth="50.0">
          <graphic>
-            <ImageView fitHeight="28.0" fitWidth="44.0">
+            <ImageView fx:id="imgcamera" fitHeight="28.0" fitWidth="44.0">
                <image>
                   <Image url="@../img/camera.png" />
                </image>

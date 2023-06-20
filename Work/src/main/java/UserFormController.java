@@ -41,7 +41,7 @@ public class UserFormController extends Thread implements Initializable {
     private File filePath;
     private String message = "";
     private String reply = "";
-
+//Connet
     public  void connectSocket() {
         try {
             socket = new Socket("localhost", 8000);
@@ -204,6 +204,7 @@ public class UserFormController extends Thread implements Initializable {
     }
 
     public void btnEmojiOnAction(MouseEvent mouseEvent) {
+
     }
 
     @Override
