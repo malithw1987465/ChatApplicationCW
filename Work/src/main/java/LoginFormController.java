@@ -7,18 +7,29 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LoginFormController {
-
     public Button btnLogin;
     public TextField txtUserName;
     public AnchorPane dashboardPane;
+    public static String name;
+
+    public ArrayList<String> Users = new ArrayList();
+
     public void btnLoginOnAction(ActionEvent event) throws IOException {
-        String name=txtUserName.getText();
-        Stage stage = (Stage) dashboardPane.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ServerForm.fxml"))));
-        stage.setTitle(name+" Chat Room");
-        stage.centerOnScreen();
-        stage.show();
+        name=txtUserName.getText();
+        if(Users.contains(name)){
+            System.out.println("User exist");
+        }
+        else {
+            Stage stage = new Stage();
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("View/ServerForm.fxml"))));
+            stage.setTitle(name + " Room");
+            stage.centerOnScreen();
+            stage.show();
+        }
+        Users.add(name);
     }
 }
+
