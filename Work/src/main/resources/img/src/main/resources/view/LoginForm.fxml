@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="dashboardPane" prefHeight="477.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginFormController">
+   <children>
+      <ImageView fitHeight="477.0" fitWidth="496.0">
+         <image>
+            <Image url="@../img/pexels-codioful-(formerly-gradienta)-7135121.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="226.0" fitWidth="227.0" layoutX="135.0" layoutY="60.0">
+         <image>
+            <Image url="@../img/profile-user.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUserName" layoutX="97.0" layoutY="320.0" prefHeight="41.0" prefWidth="304.0" promptText="User Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnLogin" layoutX="206.0" layoutY="391.0" onAction="#loginBtnOnAction" prefHeight="41.0" prefWidth="91.0" text="Login" textFill="#fce4e4">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
