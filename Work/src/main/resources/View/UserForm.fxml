@@ -18,23 +18,16 @@
             <Image url="@../img/img.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtMessage" layoutX="14.0" layoutY="392.0" prefHeight="38.0" prefWidth="504.0" />
-      <Button fx:id="btnSend" layoutX="592.0" layoutY="399.0" mnemonicParsing="false" onAction="#bntSendOnAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #3498db;" text="Send" />
-      <Label fx:id="lblName" layoutX="23.0" layoutY="14.0" prefHeight="56.0" prefWidth="167.0">
+      <TextField fx:id="txtMessage" layoutX="9.0" layoutY="426.0" prefHeight="38.0" prefWidth="504.0" />
+      <Button fx:id="btnSend" layoutX="594.0" layoutY="430.0" mnemonicParsing="false" onAction="#bntSendOnAction" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #3498db;" text="Send" />
+      <Label fx:id="lblName" layoutX="7.0" layoutY="4.0" prefHeight="56.0" prefWidth="167.0">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <Button fx:id="btnCamera" layoutX="454.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnCameraOnAction" prefHeight="36.0" prefWidth="50.0">
-         <graphic>
-            <ImageView fx:id="imgcamera" fitHeight="22.0" fitWidth="44.0">
-               <image>
-                  <Image url="@../img/camera.png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
-      <Button fx:id="btnEmoji" layoutX="536.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnEmojiOnAction" prefHeight="31.0" prefWidth="50.0" />
-      <ScrollPane layoutX="9.0" layoutY="70.0" prefHeight="304.0" prefWidth="669.0" style="-fx-background-color: #95a5a6;">
+      <Button fx:id="btnCamera" layoutX="463.0" layoutY="427.0" mnemonicParsing="false" onAction="#btnCameraOnAction" prefHeight="36.0" prefWidth="50.0" />
+      <Button fx:id="btnEmoji" layoutX="536.0" layoutY="430.0" mnemonicParsing="false" onAction="#btnEmojiOnAction" prefHeight="31.0" prefWidth="50.0" />
+      <ScrollPane layoutX="10.0" layoutY="60.0" prefHeight="268.0" prefWidth="669.0" style="-fx-background-color: #95a5a6;">
          <content>
             <HBox prefHeight="58.0" prefWidth="665.0">
                <children>
@@ -43,10 +36,64 @@
             </HBox>
          </content>
       </ScrollPane>
-      <ImageView fx:id="imgimoji" fitHeight="26.0" fitWidth="22.0" layoutX="550.0" layoutY="400.0">
+      <ImageView fx:id="imgimoji" fitHeight="26.0" fitWidth="22.0" layoutX="550.0" layoutY="432.0">
          <image>
             <Image url="@../img/smiling-face.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="imgcamera" fitHeight="35.0" fitWidth="44.0" layoutX="466.0" layoutY="428.0">
+         <image>
+            <Image url="@../img/camera.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="emojiPane" layoutX="415.0" layoutY="333.0" prefHeight="82.0" prefWidth="193.0">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="189.0" layoutX="21.0" layoutY="3.0">
+               <image>
+                  <Image url="@../img/4954390_2599646.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="53.0" layoutY="51.0" onMouseClicked="#emoji6OnAction">
+               <image>
+                  <Image url="@../img/laugh.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="7.0" layoutY="53.0" onMouseClicked="#emoji5OnAction">
+               <image>
+                  <Image url="@../img/in-love.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="53.0" layoutY="13.0" onMouseClicked="#emoji2OnAction">
+               <image>
+                  <Image url="@../img/happy.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="146.0" layoutY="36.0" onMouseClicked="#emoji8OnAction">
+               <image>
+                  <Image url="@../img/like.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="146.0" layoutY="14.0" onMouseClicked="#emoji4OnAction">
+               <image>
+                  <Image url="@../img/love.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="98.0" layoutY="48.0" onMouseClicked="#emoji7OnAction">
+               <image>
+                  <Image url="@../img/monkey.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="7.0" layoutY="11.0" onMouseClicked="#emoji1OnAction">
+               <image>
+                  <Image url="@../img/party.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="98.0" layoutY="16.0" onMouseClicked="#emoji3OnAction">
+               <image>
+                  <Image url="@../img/sad.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

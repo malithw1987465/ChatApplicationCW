@@ -26,14 +26,17 @@ import java.util.ResourceBundle;
 
 public class UserFormController extends Thread implements Initializable {
     public AnchorPane dashboardPane;
+    public AnchorPane emojiPane;
     public TextField txtMessage;
     public VBox vBox;
     public Button btnSend;
+    public Button btnEmoji;
     public ImageView imgimoji;
     public ImageView imgcamera;
     public Button btnCamera;
     public Label lblName;
     private Socket socket;
+
     private DataInputStream inputStream;
     private DataOutputStream outputStream;
     BufferedReader reader;
@@ -207,15 +210,89 @@ public class UserFormController extends Thread implements Initializable {
 
     }
 
-    public void btnEmojiOnAction(MouseEvent mouseEvent) {
+    public void btnEmojiOnAction(ActionEvent mouseEvent) {
+        emojiPane.setVisible(true);
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         connectSocket();
+        emojiPane.setVisible(false);
         lblName.setText(LoginFormController.name);
 
+    }
+    public void btnEmoji(String msg){
+        writer.println(lblName.getText() + ": " + msg);
+        HBox hBox=new HBox();
+        hBox.setAlignment(Pos.CENTER_RIGHT);
+        hBox.setPadding(new Insets(5, 5, 5, 10));
+        Text text = new Text("Me : "+msg);
+        text.setStyle("-fx-font-size: 15px");
+        TextFlow textFlow = new TextFlow(text);
+        textFlow.setStyle("-fx-color:rgb(239,242,255);"
+                + "-fx-background-color: rgb(15,125,242);" +
+                "-fx-background-radius: 20px");
+        textFlow.setPadding(new Insets(5, 10, 5, 10));
+        text.setFill(Color.color(0.934, 0.945, 0.996));
+        hBox.getChildren().add(textFlow);
+        vBox.getChildren().add(hBox);
+        writer.flush();
+        txtMessage.setText("");
+        if (msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
+            System.exit(0);
+        }
+
+
+//        txtAreaMsg.appendText("Me : "+"\uD83D\uDE42");
+    }
+
+    public void emoji1OnAction(MouseEvent mouseEvent) {
+        String message=( "\uD83D\uDE02");
+        emojiPane.setVisible(false);
+        btnEmoji(message);
+    }
+
+    public void emoji2OnAction(MouseEvent mouseEvent) {
+        String message=("\uD83D\uDE01");
+        emojiPane.setVisible(false);
+        btnEmoji(message);
+    }
+
+    public void emoji3OnAction(MouseEvent mouseEvent) {
+        String message=("\uD83D\uDE0D");
+        emojiPane.setVisible(false);
+        btnEmoji(message);
+    }
+
+    public void emoji4OnAction(MouseEvent mouseEvent) {
+        String message=( "\uD83D\uDE2D");
+        emojiPane.setVisible(false);
+        btnEmoji(message);
+    }
+
+    public void emoji5OnAction(MouseEvent mouseEvent) {
+        String message=("\uD83D\uDE41");
+        emojiPane.setVisible(false);
+        btnEmoji(message);
+    }
+
+    public void emoji6OnAction(MouseEvent mouseEvent) {
+        String message=("\uD83D\uDE0A");
+        emojiPane.setVisible(false);
+        btnEmoji(message);
+    }
+
+    public void emoji7OnAction(MouseEvent mouseEvent) {
+        String message=("\uD83D\uDE35");
+        emojiPane.setVisible(false);
+        btnEmoji(message);
+    }
+
+    public void emoji8OnAction(MouseEvent mouseEvent) {
+        String message=("\uD83D\uDE2B");
+        emojiPane.setVisible(false);
+        btnEmoji(message);
     }
 
 
