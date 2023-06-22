@@ -17,7 +17,7 @@ public class Server {
       ServerSocket serverSocket;
       Socket socket;
       try {
-         serverSocket=new ServerSocket(3030);
+         serverSocket=new ServerSocket(8000);
          while(true){
             System.out.println("Waiting for clients");
             socket= serverSocket.accept();

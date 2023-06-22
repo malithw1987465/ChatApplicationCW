@@ -41,7 +41,8 @@ public class UserFormController extends Thread implements Initializable {
     private File filePath;
     private String message = "";
     private String reply = "";
-//Connet
+
+//Connect
     public  void connectSocket() {
         try {
             socket = new Socket("localhost", 8000);
@@ -87,8 +88,8 @@ public class UserFormController extends Thread implements Initializable {
 
                     ImageView imageView = new ImageView(image);
 
-                    imageView.setFitWidth(70);
-                    imageView.setFitHeight(70);
+                    imageView.setFitWidth(150);
+                    imageView.setFitHeight(150);
 
                     HBox hBox = new HBox(10);
                     hBox.setAlignment(Pos.BOTTOM_RIGHT);//bottom-right
@@ -96,11 +97,11 @@ public class UserFormController extends Thread implements Initializable {
                     //hBox.setAlignment(Pos.CENTER_LEFT);
 
                     ///   hBox.getChildren().add(imageView);
-
-                    if (!cmd.equalsIgnoreCase(/*LoginFormController.name*/lblName.getText())) {
+                    //for sending the images
+                    if (!cmd.equalsIgnoreCase(lblName.getText())) {
                         vBox.setAlignment(Pos.BOTTOM_LEFT);//top left
                         hBox.setAlignment(Pos.CENTER_LEFT);//center right
-
+                        //to set the image to other clients
                         Text text1 = new Text("  " + cmd + " :");
                         hBox.getChildren().add(text1);
                         hBox.getChildren().add(imageView);
@@ -113,10 +114,11 @@ public class UserFormController extends Thread implements Initializable {
 
                     Platform.runLater(() -> vBox.getChildren().addAll(hBox));
 
-                } else {
+                }
+                else {
                     TextFlow tempTextFlow = new TextFlow();
 
-                    if (!cmd.equalsIgnoreCase(/*LoginFormController.name*/lblName.getText() + ":")) {
+                    if (!cmd.equalsIgnoreCase(/*LoginFormController.name*/ lblName.getText()+ ":")) {
                         Text name = new Text(cmd + " ");
                         name.getStyleClass().add("name");
                         tempTextFlow.getChildren().add(name);
@@ -136,12 +138,12 @@ public class UserFormController extends Thread implements Initializable {
                         hBox.setAlignment(Pos.CENTER_LEFT);
                         hBox.getChildren().add(textFlow);
                     } else {
-                        Text text1 = new Text(fullMsg + ": Me");
-                        TextFlow textFlow1 = new TextFlow(text1);
-                        hBox.setAlignment(Pos.BOTTOM_RIGHT);
-                        hBox.getChildren().add(textFlow1);
-                        textFlow1.setStyle("-fx-background-color:#7bed9f;" + "-fx-background-radius: 20px;" + "-fx-font-size: 17px;");
-                        textFlow1.setPadding(new Insets(5, 10, 5, 10));
+//                        Text text1 = new Text(fullMsg + ": Me");
+//                        TextFlow textFlow1 = new TextFlow(text1);
+//                        hBox.setAlignment(Pos.BOTTOM_RIGHT);
+//                        hBox.getChildren().add(textFlow1);
+//                        textFlow1.setStyle("-fx-background-color:#7bed9f;" + "-fx-background-radius: 20px;" + "-fx-font-size: 17px;");
+//                        textFlow1.setPadding(new Insets(5, 10, 5, 10));
                     }
                     Platform.runLater(() -> vBox.getChildren().addAll(hBox));
                 }
@@ -162,6 +164,8 @@ public class UserFormController extends Thread implements Initializable {
 
 
     }
+
+
 
 
 
@@ -189,7 +193,7 @@ public class UserFormController extends Thread implements Initializable {
 
     }
 
-    public void btnCameraOnAction(MouseEvent mouseEvent) {
+    public void btnCameraOnAction(ActionEvent mouseEvent) {
         try {
             Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
             FileChooser fileChooser = new FileChooser();
